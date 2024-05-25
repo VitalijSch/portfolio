@@ -1,0 +1,73 @@
+.above-the-fold-container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
+
+    >div {
+        width: 100%;
+        height: calc(100% - 117px);
+        padding: 0 60px;
+        position: relative;
+    }
+}
+
+.background-img {
+    position: absolute;
+    top: -200px;
+    left: -220px;
+    width: 900px;
+}
+
+.profile-picture {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 780px;
+}
+
+.small-background-img {
+    position: absolute;
+    bottom: -103px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 206px;
+    height: 206px;
+    z-index: 2;
+}
+
+.right-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    >div {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.header-container {
+    width: 50%;
+    justify-content: center;
+
+    >span {
+        font-size: 64px;
+        color: #5988FF;
+    }
+
+    >h1 {
+        font-size: 120px;
+        line-height: 120px;
+        font-weight: 900;
+        color: #5988FF;
+        font-family: 'Baloo 2';
+    }
+}
+
+.icons-container {
+    justify-content: flex-end;
+    padding-bottom: 80px;
+    gap: 25px;
+}
