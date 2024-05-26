@@ -1,13 +1,13 @@
 .above-the-fold-container {
-    width: 100vw;
     height: 100vh;
     background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
 
     >div {
+        max-width: 1440px;
         width: 100%;
         height: calc(100% - 117px);
         padding: 0 60px;
-        position: relative;
+        margin: 0 auto;
     }
 }
 
@@ -70,4 +70,94 @@
     justify-content: flex-end;
     padding-bottom: 80px;
     gap: 25px;
+
+    >a {
+        >img {
+            transition: transform 0.2s ease;
+            cursor: pointer;
+
+            &:hover {
+                transform: translateX(-10px);
+            }
+        }
+    }
+}
+
+@media(max-width: 1360px) {
+    .header-container {
+        padding-left: 160px;
+
+        >span {
+            font-size: 48px;
+        }
+
+        >h1 {
+            font-size: 80px;
+            line-height: 80px;
+        }
+    }
+}
+
+@media(max-width: 1250px) {
+    .header-container {
+        padding-left: 160px;
+
+        >span {
+            font-size: 36px;
+        }
+
+        >h1 {
+            font-size: 73px;
+            line-height: 73px;
+        }
+    }
+}
+
+@media(max-width: 1200px) {
+    .profile-picture {
+        width: 700px;
+    }
+
+    .right-container {
+        justify-content: flex-end;
+
+        >div {
+            height: unset;
+        }
+    }
+
+    .header-container {
+        position: absolute;
+        top: 120px;
+        left: 60px;
+        z-index: 1;
+        padding: 0;
+
+        >span {
+            font-size: 36px;
+            color: white;
+        }
+
+        >h1 {
+            font-size: 73px;
+            line-height: 73px;
+            color: white;
+        }
+    }
+}
+
+@media(max-width: 1010px) {
+    .background-img {
+        width: 750px;
+    }
+}
+
+@media(max-width: 850px) {
+    .right-container {
+        display: unset;
+    }
+
+    .icons-container {
+        display: none;
+    }
 }

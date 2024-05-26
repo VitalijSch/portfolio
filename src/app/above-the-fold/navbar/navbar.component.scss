@@ -1,25 +1,55 @@
 nav {
+    max-width: 1440px;
     width: 100%;
     min-height: 117px;
-    color:#5988FF;
+    color: #5988FF;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 60px;
+    margin: 0 auto;
 
     >img {
-        width: 64px;
-        height: 69px;
-        z-index: 1;
+
+        &:first-child {
+            width: 64px;
+            height: 69px;
+            z-index: 1;
+        }
+
+        &:last-child {
+            display: none;
+        }
     }
 
     >div {
         display: flex;
-        gap: 36px;
     }
 }
 
 a {
     text-decoration: none;
     color: unset;
+    width: 110px;
+    text-align: end;
+
+    &:hover {
+        font-weight: 700;
+    }
+}
+
+@media(max-width: 880px) {
+    nav {
+
+        >img {
+
+            &:last-child {
+                display: block;
+            }
+        }
+
+        >div {
+            display: none;
+        }
+    }
 }
