@@ -6,7 +6,7 @@
         max-width: 1440px;
         width: 100%;
         height: calc(100% - 117px);
-        padding: 0 60px;
+        padding: 0 100px;
         margin: 0 auto;
     }
 }
@@ -14,15 +14,17 @@
 .background-img {
     position: absolute;
     top: -200px;
-    left: -220px;
+    left: -200px;
     width: 900px;
 }
 
 .profile-picture {
     position: absolute;
+    left: 100px;
     bottom: 0;
     z-index: 1;
-    width: 780px;
+    width: 700px;
+    height: auto;
 }
 
 .small-background-img {
@@ -83,17 +85,17 @@
     }
 }
 
-@media(max-width: 1360px) {
+@media(max-width: 1400px) {
     .header-container {
         padding-left: 160px;
 
         >span {
-            font-size: 48px;
+            font-size: 40px;
         }
 
         >h1 {
-            font-size: 80px;
-            line-height: 80px;
+            font-size: 72px;
+            line-height: 72px;
         }
     }
 }
@@ -115,7 +117,7 @@
 
 @media(max-width: 1200px) {
     .profile-picture {
-        width: 700px;
+        width: 650px;
     }
 
     .right-container {
@@ -128,8 +130,8 @@
 
     .header-container {
         position: absolute;
-        top: 120px;
-        left: 60px;
+        top: 0;
+        left: 100px;
         z-index: 1;
         padding: 0;
 
@@ -146,18 +148,108 @@
     }
 }
 
-@media(max-width: 1010px) {
-    .background-img {
-        width: 750px;
-    }
-}
-
-@media(max-width: 850px) {
+@media(max-width: 1000px) {
     .right-container {
         display: unset;
     }
 
     .icons-container {
         display: none;
+    }
+}
+
+@media(max-width: 850px) {
+    .above-the-fold-container {
+
+        >div {
+            padding: 0 20px;
+        }
+    }
+
+    .background-img {
+        width: 750px;
+    }
+
+    .profile-picture {
+        left: 20px;
+        width: 550px;
+    }
+
+    .small-background-img {
+        height: 156px;
+        width: 156px;
+        bottom: -78px;
+    }
+
+    .header-container {
+        left: 20px;
+    }
+}
+
+@media(max-width: 670px) {
+    .right-container {
+
+        >div {
+            width: calc(100% - 40px);
+        }
+    }
+}
+
+@media(max-width: 580px) {
+    .background-img {
+        left: -250px;
+        width: 670px;
+    }
+
+    .profile-picture {
+        width: 450px;
+    }
+}
+
+@media(max-width: 480px) {
+    .background-img {
+        left: -250px;
+        width: 550px;
+    }
+
+    .profile-picture {
+        width: 350px;
+    }
+
+    .small-background-img {
+        height: 80px;
+        width: 80px;
+        bottom: -40px;
+    }
+
+    .header-container {
+
+        >span {
+            font-size: 20px;
+        }
+
+        >h1 {
+            font-size: 48px;
+            line-height: 48px;
+        }
+    }
+}
+
+@media(max-width: 380px) {
+    .background-img {
+        width: 530px;
+    }
+
+    .profile-picture {
+        width: 250px;
+    }
+}
+
+@media(min-height: 670px) and (max-width: 440px) {
+    .above-the-fold-container {
+
+        >div {
+            height: calc(100% - 300px);
+        }
     }
 }
