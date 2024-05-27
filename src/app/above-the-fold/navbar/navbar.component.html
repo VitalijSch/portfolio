@@ -1,12 +1,21 @@
 <nav>
-    <img src="./assets/img/above_the_fold/logo.png" alt="logo">
+    <img src="./assets/img/above_the_fold/logo.png" alt="logo white">
     <div>
         <a href="">About me</a>
         <a href="">Skill set</a>
         <a href="">My work</a>
     </div>
-    <img src="./assets/img/above_the_fold/burger_menu.png" alt="burger menu">
+    <img (click)="handleMenuBarMobile()" src="./assets/img/above_the_fold/burger_menu.png" alt="burger menu">
 </nav>
-<!-- <div class="menu-bar-mobile-container">
-    <img src="./assets/img/above_the_fold/close.png" alt="close">
-</div> -->
+<div [ngClass]="slideMenuBar()">
+    <div>
+        <img src="./assets/img/above_the_fold/logo_mobile.png" alt="logo blue">
+        <img (click)="handleMenuBarMobile()" src="./assets/img/above_the_fold/close.png" alt="close">
+    </div>
+    <div>
+        <a href="">About me</a>
+        <a href="">Skill set</a>
+        <a href="">My work</a>
+        <a href="">Contact</a>
+    </div>
+</div>
