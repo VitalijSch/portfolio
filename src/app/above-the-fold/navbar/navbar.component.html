@@ -1,9 +1,9 @@
 <nav>
     <img src="./assets/img/above_the_fold/logo.png" alt="logo white">
     <div>
-        <a href="">About me</a>
-        <a href="">Skill set</a>
-        <a href="">My work</a>
+        <a href="#aboutMe">About me</a>
+        <a href="#skillSet">Skill set</a>
+        <a href="#myWork">My work</a>
     </div>
     <img (click)="handleMenuBarMobile()" src="./assets/img/above_the_fold/burger_menu.png" alt="burger menu">
 </nav>
@@ -13,9 +13,9 @@
         <img (click)="handleMenuBarMobile()" src="./assets/img/above_the_fold/close.png" alt="close">
     </div>
     <div>
-        <a href="">About me</a>
-        <a href="">Skill set</a>
-        <a href="">My work</a>
-        <a href="">Contact</a>
+        <a (click)="handleMenuBarMobile()" href="#aboutMe">About me</a>
+        <a (click)="handleMenuBarMobile()" href="#skillSet">Skill set</a>
+        <a (click)="handleMenuBarMobile()" href="#myWork">My work</a>
+        <a (click)="handleMenuBarMobile()" href="#contact">Contact</a>
     </div>
 </div>

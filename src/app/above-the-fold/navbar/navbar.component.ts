@@ -9,14 +9,21 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  showMenuBar:boolean = false;
+  showMenuBar: boolean = false;
+
+  constructor() { }
 
   handleMenuBarMobile() {
     this.showMenuBar = !this.showMenuBar;
+    if (this.showMenuBar) {
+      document.body.style.overflowY = 'hidden';
+    } else {
+      document.body.style.overflowY = '';
+    }
   }
 
   slideMenuBar() {
-    if(this.showMenuBar) {
+    if (this.showMenuBar) {
       return 'menu-bar-mobile-container slide-from-right'
     } else {
       return 'menu-bar-mobile-container';

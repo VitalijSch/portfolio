@@ -154,6 +154,12 @@
     }
 }
 
+@media(max-width: 1050px) {
+    .background-img{
+        max-width: 840px;
+    }
+}
+
 @media(max-width: 1000px) {
     .right-container {
         display: unset;

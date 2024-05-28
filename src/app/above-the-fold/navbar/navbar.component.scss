@@ -31,9 +31,10 @@ nav {
 a {
     text-decoration: none;
     color: unset;
-    width: 110px;
+    width: 120px;
     text-align: end;
     z-index: 2;
+    font-size: 23px;
 
     &:hover {
         font-weight: 700;
