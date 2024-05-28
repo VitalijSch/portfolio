@@ -1,0 +1,78 @@
+.background-container {
+    background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
+}
+
+.contact-container {
+    max-width: 1440px;
+    padding: 30px 100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+
+    >h2 {
+        font-size: 90px;
+        color: #5988FF;
+        font-family: 'Baloo 2';
+    }
+}
+
+.main-container {
+    display: flex;
+    column-gap: 100px;
+
+    >div {
+        width: 50%;
+        height: 500px;
+    }
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    position: relative;
+
+    >h3 {
+        font-size: 32px;
+        font-weight: 700;
+        color: #5988FF;
+    }
+
+    >span {
+        color: #5988FF;
+
+        >span {
+            font-weight: 800;
+        }
+    }
+}
+
+.arrow-top {
+    width: 39px;
+    height: 39px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    background-image: url(./../../assets/img/contact/arrow_top_default.png);
+
+    &:hover {
+        background-image: url(./../../assets/img/contact/arrow_top_hover.png);
+    }
+}
+
+.right-container {}
+
+.background0 {
+    width: 204px;
+    height: 204px;
+    position: absolute;
+    bottom: 120px;
+    left: 280px;
+}
+
+.background1 {
+    display: none;
+}
