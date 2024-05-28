@@ -1,13 +1,18 @@
-.above-the-fold-container {
-    height: 100vh;
+.background-container {
     background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
+}
+
+.above-the-fold-container {
+    max-width: 1440px;
+    max-height: 1080px;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0 auto;
 
     >div {
-        max-width: 1440px;
         width: 100%;
         height: calc(100% - 117px);
         padding: 0 100px;
-        margin: 0 auto;
     }
 }
 

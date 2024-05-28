@@ -1,0 +1,23 @@
+<div class="my-work-container">
+    @for (img of [0,1,2,3,4]; track $index) {
+        <img class="background{{img}}" src="./assets/img/ball.png" alt="ball">
+    }
+    <h2>My work</h2>
+    <div class="description">Explore a selection of my work here - Interact with projects to see my skills in action.
+    </div>
+    @for (work of myWorks; track $index) {
+    <div [ngClass]="{ 'reverse-element': $index % 2 !== 0 }" class="project-container">
+        <img src="./assets/img/my_work/project_{{work.img}}.png" alt="project">
+        <div [ngClass]="{ 'reverse-content': $index % 2 !== 0 }">
+            <h3>{{work.title}}</h3>
+            <span>{{work.languages}}</span>
+            <p>{{work.description}}</p>
+            <button class="github-button">GitHub</button>
+            <div class="mobile-button-container">
+                <button>Live test</button>
+                <button>GitHub</button>
+            </div>
+        </div>
+    </div>
+    }
+</div>

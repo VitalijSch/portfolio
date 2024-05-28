@@ -1,0 +1,53 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-skill-set',
+  standalone: true,
+  imports: [],
+  templateUrl: './skill-set.component.html',
+  styleUrl: './skill-set.component.scss'
+})
+export class SkillSetComponent {
+  skills: any[] = [
+    {
+      img: 0,
+      skill: 'Angular',
+    },
+    {
+      img: 1,
+      skill: 'TypeScript',
+    },
+    {
+      img: 2,
+      skill: 'JavaScript'
+    },
+    {
+      img: 3,
+      skill: 'HTML'
+    },
+    {
+      img: 4,
+      skill: 'Scrum'
+    },
+    {
+      img: 5,
+      skill: 'Firebase'
+    },
+    {
+      img: 6,
+      skill: 'GIT'
+    },
+    {
+      img: 7,
+      skill: 'CSS'
+    },
+    {
+      img: 8,
+      skill: 'Rest-Api'
+    },
+    {
+      img: 9,
+      skill: 'Material Design'
+    }
+  ];
+}
