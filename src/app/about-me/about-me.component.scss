@@ -37,7 +37,8 @@
             line-height: 27px;
         }
 
-        >button {
+        >a {
+            text-decoration: none;
             border: 2px solid #5988FF;
             border-radius: 10px;
             background-color: white;
@@ -59,11 +60,6 @@
 @media(max-width: 1410px) {
     .aboute-me-container {
 
-        span {
-            font-size: 100px;
-            line-height: 100px;
-        }
-
         >div {
 
             >p {
@@ -79,8 +75,8 @@
         align-items: center;
 
         span {
-            font-size: 80px;
-            line-height: 80px;
+            font-size: 100px;
+            line-height: 100px;
         }
 
         >div {
@@ -96,8 +92,9 @@
 @media(max-width: 1000px) {
     .aboute-me-container {
         flex-direction: column;
-        align-items: start;
+        align-items: center;
         padding-bottom: 100px;
+        text-align: center;
 
         >div {
 
@@ -146,12 +143,12 @@
     }
 }
 
-@media(max-width: 430px) {
+@media(max-width: 550px) {
     .aboute-me-container {
 
         span {
-            font-size: 55px;
-            line-height: 55px;
+            font-size: 70px;
+            line-height: 70px;
         }
 
         >div {
@@ -163,8 +160,13 @@
     }
 }
 
-@media(max-width: 360px) {
+@media(max-width: 400px) {
     .aboute-me-container {
+
+        span {
+            font-size: 60px;
+            line-height: 60px;
+        }
 
         >div {
 

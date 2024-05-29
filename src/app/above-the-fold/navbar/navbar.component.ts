@@ -11,8 +11,6 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
   showMenuBar: boolean = false;
 
-  constructor() { }
-
   handleMenuBarMobile() {
     this.showMenuBar = !this.showMenuBar;
     if (this.showMenuBar) {

@@ -14,16 +14,64 @@
                 <a class="arrow-top" href="#aboveTheFold"></a>
             </div>
             <div class="right-container">
-                <form action="">
-                    <input type="text" id="name">
-                    <input type="email" id="email">
-                    <textarea id="message"></textarea>
-                    <div>
-                        <img src="./assets/img/contact/check.png" alt="checkbox">
-                        <span>I've read the <a href="">privacy policy </a> and agree to the processing of my data as
-                            outlined.</span>
+                <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+                    <div class="input-container">
+                        <div class="valid-container" [ngClass]="{'error-img': !name.valid && name.touched && !name.disabled,
+                            'done-img': name.valid && name.touched && !name.disabled}">
+                        </div>
+                        <input #name="ngModel" [(ngModel)]="contactData.name" type="text" name="name" id="name"
+                            placeholder="" pattern="[a-zA-Z0-9 ]*" maxlength="50" required>
+                        <label for="name">Your name</label>
+                        @if (!name.valid && name.touched && !name.disabled) {
+                        <span class="error-message">Your name is required</span>
+                        }
                     </div>
-                    <button>{{'Say hello ;)'}}</button>
+                    <div class="input-container">
+                        <div class="valid-container" [ngClass]="{'error-img': !email.valid && email.touched && !email.disabled,
+                                'done-img': email.valid && email.touched && !email.disabled}"></div>
+                        <input #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email" id="email"
+                            placeholder="" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+                        <label for="email">Your email</label>
+                        @if (!email.valid && email.touched && !email.disabled) {
+                        <span class="error-message">Your email is required</span>
+                        }
+                    </div>
+                    <div class="input-container">
+                        <div class="valid-container" [ngClass]="{'error-img': !message.valid && message.touched && !message.disabled,
+                            'done-img': message.valid && message.touched && !message.disabled}"></div>
+                        <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="message"
+                            rows="10" placeholder="" maxlength="400" pattern="[a-zA-Z0-9,.?!-]*" required></textarea>
+                        <label for="message">Your message</label>
+                        @if (!message.valid && message.touched && !message.disabled) {
+                        <span class="error-message">Your message is required</span>
+                        }
+                    </div>
+                    <div class="privacy-policy">
+                        <div (click)="handleCheckbox()"
+                            [ngClass]="{'checkbox-checked': isChecked, 'checkbox-unchecked': !isChecked}"
+                            class="checkbox"></div>
+                        <div>
+                            <span>
+                                I've read the <a href="">privacy policy </a> and agree to the processing of my data as
+                                outlined.
+                            </span>
+                        </div>
+                    </div>
+                    @if (showErrorCheckbox) {
+                    <span class="error-message">Please accept the privacy policy.</span>
+                    }
+                    <button class="disabled-button" [ngClass]="{
+                        'enabled-button':
+                        isChecked &&
+                        name.valid &&
+                        name.touched &&
+                        !name.disabled &&
+                        email.valid &&
+                        email.touched &&
+                        !email.disabled &&
+                        message.valid &&
+                        message.touched &&
+                        !message.disabled}" type="submit">{{'Say hello ;)'}}</button>
                 </form>
             </div>
         </div>

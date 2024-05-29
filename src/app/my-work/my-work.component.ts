@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { MyWorks } from '../interfaces/my-works';
 
 @Component({
   selector: 'app-my-work',
@@ -9,7 +10,7 @@ import { Component } from '@angular/core';
   styleUrl: './my-work.component.scss'
 })
 export class MyWorkComponent {
-  myWorks: any[] = [
+  myWorks: MyWorks[] = [
     {
       img: 0,
       title: 'Join',

@@ -1,11 +1,11 @@
 .background-container {
     background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
+    height: 100vh;
 }
 
 .above-the-fold-container {
     max-width: 1440px;
-    max-height: 1080px;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     margin: 0 auto;
 
@@ -31,6 +31,7 @@
     width: 700px;
     height: auto;
     object-fit: cover;
+    animation: slideInFromLeft 1s ease forwards;
 }
 
 .small-background-img {
@@ -59,6 +60,7 @@
 .header-container {
     width: 50%;
     justify-content: center;
+    animation: growAnimation 2s ease-out forwards;
 
     >span {
         font-size: 64px;

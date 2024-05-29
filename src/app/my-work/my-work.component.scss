@@ -51,6 +51,7 @@
 
         >h3 {
             font-size: 45px;
+            line-height: 45px;
             color: #5988FF;
             font-family: 'Baloo 2';
         }
@@ -166,7 +167,7 @@
     width: 180px;
     height: 180px;
     position: absolute;
-    bottom:20px;
+    bottom: 20px;
     left: 620px;
 }
 
@@ -185,7 +186,9 @@
             z-index: 1;
         }
     }
+}
 
+@media(max-width: 1000px) {
     .project-container {
         flex-direction: column;
         align-items: center;
@@ -214,7 +217,7 @@
     .background3 {
         width: 500px;
         height: 500px;
-        top: 1100px;
+        top: 850px;
     }
 }
 
@@ -225,6 +228,28 @@
 }
 
 @media(max-width: 700px) {
+    .my-work-container {
+
+        >h2 {
+            width: 450px;
+        }
+
+        >.description {
+            width: 450px;
+        }
+    }
+
+    .project-container {
+        width: 450px;
+
+        >img {
+            width: 450px;
+            height: auto;
+        }
+    }
+}
+
+@media(max-width: 480px) {
     .my-work-container {
 
         >h2 {
@@ -278,29 +303,33 @@
     .background3 {
         width: 300px;
         height: 300px;
-        top: 1020px;
-        right: -120px;
+        top: 942px;
+        right: -100px;
+    }
+
+    .background4{
+        top: 1190px;
     }
 }
 
-@media(max-width: 340px) {
+@media(max-width: 400px) {
     .my-work-container {
 
         >h2 {
-            width: 320px;
+            width: 300px;
         }
 
         >.description {
-            width: 320px;
+            width: 300px;
         }
     }
 
     .project-container {
-        width: 320px;
+        width: 300px;
         padding: 0 10px;
 
         >img {
-            width: 320px;
+            width: 300px;
         }
     }
 
