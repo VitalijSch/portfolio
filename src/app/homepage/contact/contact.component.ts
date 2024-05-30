@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-import { ContactData } from '../interfaces/contact-data';
+import { ContactData } from '../../interfaces/contact-data';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { Post } from '../interfaces/post';
+import { Post } from '../../interfaces/post';
 
 @Component({
   selector: 'app-contact',

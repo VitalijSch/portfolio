@@ -55,10 +55,10 @@
     bottom: 80px;
     left: 100px;
     cursor: pointer;
-    background-image: url(./../../assets/img/contact/arrow_top_default.png);
+    background-image: url(./../../../assets/img/contact/arrow_top_default.png);
 
     &:hover {
-        background-image: url(./../../assets/img/contact/arrow_top_hover.png);
+        background-image: url(./../../../assets/img/contact/arrow_top_hover.png);
     }
 }
 
@@ -162,11 +162,11 @@ form {
 }
 
 .checkbox-checked {
-    background-image: url(./../../assets/img/contact/checked.png);
+    background-image: url(./../../../assets/img/contact/checked.png);
 }
 
 .checkbox-unchecked {
-    background-image: url(./../../assets/img/contact/check.png);
+    background-image: url(./../../../assets/img/contact/check.png);
 }
 
 label {
@@ -205,11 +205,11 @@ textarea:focus::placeholder {
 }
 
 .error-img {
-    background-image: url(./../../assets/img/contact/error.png);
+    background-image: url(./../../../assets/img/contact/error.png);
 }
 
 .done-img {
-    background-image: url(./../../assets/img/contact/done.png);
+    background-image: url(./../../../assets/img/contact/done.png);
 }
 
 .error-message {

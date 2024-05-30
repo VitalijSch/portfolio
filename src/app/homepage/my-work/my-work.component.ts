@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { MyWorks } from '../interfaces/my-works';
+import { MyWorks } from '../../interfaces/my-works';
 
 @Component({
   selector: 'app-my-work',
