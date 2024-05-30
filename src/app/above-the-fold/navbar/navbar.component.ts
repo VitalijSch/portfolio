@@ -11,7 +11,11 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
   showMenuBar: boolean = false;
 
-  handleMenuBarMobile() {
+  public reloadPage() {
+    window.location.reload();
+  }
+
+  public handleMenuBarMobile() {
     this.showMenuBar = !this.showMenuBar;
     if (this.showMenuBar) {
       document.body.style.overflowY = 'hidden';
@@ -20,7 +24,7 @@ export class NavbarComponent {
     }
   }
 
-  slideMenuBar() {
+  public slideMenuBar() {
     if (this.showMenuBar) {
       return 'menu-bar-mobile-container slide-from-right'
     } else {

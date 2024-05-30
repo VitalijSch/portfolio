@@ -12,10 +12,10 @@
             <h3>{{work.title}}</h3>
             <span>{{work.languages}}</span>
             <p>{{work.description}}</p>
-            <button class="github-button">GitHub</button>
+            <button (click)="goToPage(work.title)" class="github-button">GitHub</button>
             <div class="mobile-button-container">
                 <button>Live test</button>
-                <button>GitHub</button>
+                <button (click)="goToPage(work.title)">GitHub</button>
             </div>
         </div>
     </div>

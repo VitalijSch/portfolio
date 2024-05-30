@@ -30,4 +30,14 @@ export class MyWorkComponent {
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.'
     }
   ];
+
+  public goToPage(title: string) {
+    if (title === 'Join') {
+      window.open('https://github.com/VitalijSch/join', '_blank');
+    } else if (title === 'El Pollo Loco') {
+      window.open('https://github.com/VitalijSch/El-Pollo-Loco', '_blank');
+    } else if (title === 'Pokedex') {
+      window.open('https://github.com/VitalijSch/Pokedex', '_blank');
+    }
+  }
 }

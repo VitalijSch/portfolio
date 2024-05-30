@@ -5,6 +5,7 @@
 .contact-container {
     max-width: 1440px;
     padding: 30px 100px;
+    padding-bottom: 80px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -51,7 +52,7 @@
     width: 39px;
     height: 39px;
     position: absolute;
-    bottom: 30px;
+    bottom: 80px;
     left: 100px;
     cursor: pointer;
     background-image: url(./../../assets/img/contact/arrow_top_default.png);
@@ -99,9 +100,11 @@ form {
 
         >.checkbox {
             cursor: pointer;
-            width: 18px;
+            min-width: 18px;
             height: 18px;
             background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
 
             &:hover {
                 filter: drop-shadow(0px 0px 5px #797EF3);
@@ -230,7 +233,7 @@ textarea:focus::placeholder {
     width: 73px;
     height: 73px;
     position: absolute;
-    bottom: 0px;
+    bottom: 50px;
     right: 80px;
 }
 
@@ -241,7 +244,7 @@ textarea:focus::placeholder {
 
     .background0 {
         left: 480px;
-        bottom: 155px;
+        bottom: 185px;
     }
 }
 
@@ -255,6 +258,11 @@ textarea:focus::placeholder {
                 width: 500px;
             }
         }
+    }
+
+    .background0 {
+        left: 480px;
+        bottom: 200px;
     }
 }
 

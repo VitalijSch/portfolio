@@ -3,6 +3,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { ContactData } from '../interfaces/contact-data';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { Post } from '../interfaces/post';
 
 @Component({
   selector: 'app-contact',
@@ -12,7 +13,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-  http = inject(HttpClient);
+  http: HttpClient = inject(HttpClient);
 
   contactData: ContactData = {
     name: '',
@@ -20,7 +21,7 @@ export class ContactComponent {
     message: '',
   };
 
-  post = {
+  post: Post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
@@ -35,36 +36,44 @@ export class ContactComponent {
   isChecked: boolean = false;
   showErrorCheckbox: boolean = false;
 
-  onSubmit(ngForm: NgForm) {
+  public onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       if (this.isChecked) {
-        this.http.post(this.post.endPoint, this.post.body(this.contactData))
-          .subscribe({
-            next: (response) => {
-              ngForm.resetForm();
-            },
-            error: (error) => {
-              console.error(error);
-            },
-            complete: () => console.info('send post complete'),
-          });
-        this.handleCheckbox();
-        this.showErrorCheckbox = false;
+        this.submitContactForm(ngForm);
       } else {
         this.showErrorCheckbox = true;
       }
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       if (this.isChecked) {
-        ngForm.resetForm();
-        this.handleCheckbox();
-        this.showErrorCheckbox = false;
+        this.resetFormAndCheckboxes(ngForm);
       } else {
         this.showErrorCheckbox = true;
       }
     }
   }
 
-  handleCheckbox() {
+  private submitContactForm(ngForm: NgForm) {
+    this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      .subscribe({
+        next: (response) => {
+          ngForm.resetForm();
+        },
+        error: (error) => {
+          console.error(error);
+        },
+        complete: () => console.info('send post complete'),
+      });
+    this.handleCheckbox();
+    this.showErrorCheckbox = false;
+  }
+
+  private resetFormAndCheckboxes(ngForm: NgForm) {
+    ngForm.resetForm();
+    this.handleCheckbox();
+    this.showErrorCheckbox = false;
+  }
+
+  public handleCheckbox() {
     this.isChecked = !this.isChecked;
     if (this.isChecked) {
       this.showErrorCheckbox = false;
