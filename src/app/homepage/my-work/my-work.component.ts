@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChildren } from '@angular/core';
 import { MyWorks } from '../../interfaces/my-works';
 
 @Component({
@@ -9,7 +9,7 @@ import { MyWorks } from '../../interfaces/my-works';
   templateUrl: './my-work.component.html',
   styleUrl: './my-work.component.scss'
 })
-export class MyWorkComponent {
+export class MyWorkComponent implements AfterViewInit {
   myWorks: MyWorks[] = [
     {
       img: 0,
@@ -34,6 +34,27 @@ export class MyWorkComponent {
     }
   ];
 
+  @ViewChildren('animatedElement') animatedElements!: ElementRef[];
+
+  ngAfterViewInit(): void {
+    const options = {
+      threshold: 0.5,
+    };
+    const callback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appear');
+        } else {
+          entry.target.classList.remove('appear');
+        }
+      });
+    };
+    const observer = new IntersectionObserver(callback, options);
+    this.animatedElements.forEach((animatedElement) => {
+      observer.observe(animatedElement.nativeElement);
+    });
+  }
+
   public goToPage(title: string) {
     if (title === 'Join') {
       window.open('https://github.com/VitalijSch/join', '_blank');
@@ -43,4 +64,6 @@ export class MyWorkComponent {
       window.open('https://github.com/VitalijSch/Pokedex', '_blank');
     }
   }
+
+
 }
