@@ -31,6 +31,30 @@ nav {
 
     >div {
         display: flex;
+        position: relative;
+
+        >div {
+
+            >.language {
+                position: absolute;
+                top: 40px;
+                z-index: 2;
+                font-size: 23px;
+                cursor: pointer;
+
+                &:first-child {
+                    right: 60px;
+                }
+
+                &:last-child {
+                    right: 0px;
+                }
+
+                &:hover {
+                    font-weight: 700;
+                }
+            }
+        }
     }
 }
 

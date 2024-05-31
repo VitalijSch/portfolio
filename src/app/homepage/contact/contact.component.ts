@@ -35,6 +35,7 @@ export class ContactComponent {
   mailTest: boolean = true;
   isChecked: boolean = false;
   showErrorCheckbox: boolean = false;
+  isSubmitted: boolean = false;
 
   public onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
@@ -64,13 +65,22 @@ export class ContactComponent {
         complete: () => console.info('send post complete'),
       });
     this.handleCheckbox();
+    this.showFeedback();
     this.showErrorCheckbox = false;
   }
 
   private resetFormAndCheckboxes(ngForm: NgForm) {
     ngForm.resetForm();
     this.handleCheckbox();
+    this.showFeedback();
     this.showErrorCheckbox = false;
+  }
+
+  private showFeedback() {
+    this.isSubmitted = true;
+    setTimeout(() => {
+      this.isSubmitted = false;
+    }, 2000);
   }
 
   public handleCheckbox() {

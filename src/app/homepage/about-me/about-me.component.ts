@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-about-me',
@@ -8,5 +8,4 @@ import { Component } from '@angular/core';
   styleUrl: './about-me.component.scss'
 })
 export class AboutMeComponent {
-
 }

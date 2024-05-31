@@ -7,17 +7,21 @@
         <div class="main-container">
             <div class="left-container">
                 <h3>Got a problem to solve?</h3>
-                <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and
+                <p>
+                    Contact me through this form, I am interested in hearing from you, knowing your ideas and
                     contributing to
-                    your projects with my work.</p>
+                    your projects with my work.
+                </p>
                 <span>Need a Frontend developer? <span>Contact me!</span></span>
                 <a class="arrow-top" href="#aboveTheFold"></a>
             </div>
             <div class="right-container">
                 <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                     <div class="input-container">
-                        <div class="valid-container" [ngClass]="{'error-img': !name.valid && name.touched && !name.disabled,
-                            'done-img': name.valid && name.touched && !name.disabled}">
+                        <div class="valid-container" [ngClass]="{
+                            'error-img': !name.valid && name.touched && !name.disabled,
+                            'done-img': name.valid && name.touched && !name.disabled
+                            }">
                         </div>
                         <input #name="ngModel" [(ngModel)]="contactData.name" type="text" name="name" id="name"
                             placeholder="" pattern="[a-zA-Z0-9 ]*" maxlength="50" required>
@@ -27,8 +31,10 @@
                         }
                     </div>
                     <div class="input-container">
-                        <div class="valid-container" [ngClass]="{'error-img': !email.valid && email.touched && !email.disabled,
-                                'done-img': email.valid && email.touched && !email.disabled}"></div>
+                        <div class="valid-container" [ngClass]="{
+                            'error-img': !email.valid && email.touched && !email.disabled,
+                                'done-img': email.valid && email.touched && !email.disabled
+                                }"></div>
                         <input #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email" id="email"
                             placeholder="" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
                         <label for="email">Your email</label>
@@ -37,8 +43,10 @@
                         }
                     </div>
                     <div class="input-container">
-                        <div class="valid-container" [ngClass]="{'error-img': !message.valid && message.touched && !message.disabled,
-                            'done-img': message.valid && message.touched && !message.disabled}"></div>
+                        <div class="valid-container" [ngClass]="{
+                            'error-img': !message.valid && message.touched && !message.disabled,
+                            'done-img': message.valid && message.touched && !message.disabled
+                            }"></div>
                         <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="message"
                             rows="10" placeholder="" maxlength="400" pattern="[a-zA-Z0-9,.?!-]*" required></textarea>
                         <label for="message">Your message</label>
@@ -52,7 +60,8 @@
                             class="checkbox"></div>
                         <div>
                             <span>
-                                I've read the <a href="">privacy policy </a> and agree to the processing of my data as
+                                I've read the <a href="/privacy-policy">privacy policy </a> and agree to the processing
+                                of my data as
                                 outlined.
                             </span>
                         </div>
@@ -77,3 +86,10 @@
         </div>
     </div>
 </div>
+@if(isSubmitted) {
+<div class="pop-up-contact-container">
+    <div class="feedback-container">
+        <span>Vielen Dank!<br> Deine Nachricht wurde erfolgreich übermittelt.</span>
+    </div>
+</div>
+}

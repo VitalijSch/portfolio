@@ -6,7 +6,11 @@
     display: flex;
     justify-content: space-between;
     gap: 50px;
+    opacity: 0;
     position: relative;
+    animation: opacityAnimation linear forwards;
+    animation-timeline: scroll();
+    animation-range: contain;
 
     >img {
         width: 82px;

@@ -1,0 +1,42 @@
+.background-container {
+    background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
+}
+
+.privacy-policy-container {
+    max-width: 1440px;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0 100px;
+    padding-top: 220px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.overflow-scroll-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.background-img {
+    position: absolute;
+    top: -75px;
+    left: -30px;
+    width: 300px;
+}
+
+@media(max-width: 850px) {
+    .privacy-policy-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .background-img {
+        top: -100px;
+        left: -120px;
+    }
+}

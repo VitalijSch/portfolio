@@ -6,7 +6,7 @@ import { Skills } from '../../interfaces/skills';
   standalone: true,
   imports: [],
   templateUrl: './skill-set.component.html',
-  styleUrl: './skill-set.component.scss'
+  styleUrl: './skill-set.component.scss',
 })
 export class SkillSetComponent {
   skills: Skills[] = [

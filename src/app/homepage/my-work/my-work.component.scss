@@ -118,6 +118,12 @@
     flex-direction: row-reverse;
 }
 
+.animation1{
+    animation: gAnimation linear forwards;
+    animation-timeline: scroll();
+    animation-range: contain;
+}
+
 .reverse-content {
     align-items: end;
     text-align: end;
@@ -307,7 +313,7 @@
         right: -100px;
     }
 
-    .background4{
+    .background4 {
         top: 1190px;
     }
 }

@@ -9,10 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  showMenuBar: boolean = false;
+  private showMenuBar: boolean = false;
 
-  public reloadPage() {
-    window.location.reload();
+  public reloadHomepage() {
+    window.location.href = '/';
   }
 
   public handleMenuBarMobile() {
