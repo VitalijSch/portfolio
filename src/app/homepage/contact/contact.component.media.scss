@@ -1,0 +1,142 @@
+@media(max-width: 1315px) {
+    .main-container {
+        column-gap: 50px;
+    }
+
+    .background0 {
+        left: 480px;
+        bottom: 185px;
+    }
+}
+
+@media(max-width: 1110px) {
+    form {
+
+        >.input-container {
+
+            >input,
+            textarea {
+                width: 500px;
+            }
+        }
+    }
+
+    .background0 {
+        left: 480px;
+        bottom: 200px;
+    }
+}
+
+@media(max-width: 1000px) {
+    .contact-container {
+
+        >h2 {
+            width: 620px;
+            margin: 0 auto;
+        }
+    }
+
+    .main-container {
+        flex-direction: column;
+        width: 620px;
+        margin: 0 auto;
+
+        >div {
+            width: 100%;
+
+            &:first-child {
+                height: unset;
+            }
+        }
+    }
+
+    form {
+        width: 100%;
+
+        >.input-container {
+            width: 100%;
+
+            >input,
+            textarea {
+                width: 100%;
+            }
+        }
+
+        >.privacy-policy {
+            width: 100%;
+        }
+    }
+
+    .left-container {
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width: 850px) {
+    .contact-container {
+        padding: 30px 20px;
+    }
+
+    .arrow-top {
+        bottom: 30px;
+        left: 20px;
+    }
+
+    .background0 {
+        left: 0;
+    }
+}
+
+@media(max-width: 700px) {
+    .contact-container {
+
+        >h2 {
+            width: 450px;
+        }
+    }
+
+    .main-container {
+        width: 450px;
+    }
+}
+
+@media(max-width: 480px) {
+    .contact-container {
+
+        >h2 {
+            width: 340px;
+            font-size: 64px;
+        }
+    }
+
+    .main-container {
+        width: 340px;
+    }
+
+    .background0 {
+        width: 120px;
+        height: 120px;
+        bottom: 345px;
+        left: 130px;
+    }
+
+    .background1 {
+        width: 39px;
+        height: 39px;
+        bottom: 30px;
+        right: 20px;
+    }
+}
+
+@media(max-width: 400px) {
+    .contact-container {
+
+        >h2 {
+            width: 300px;
+        }
+    }
+
+    .main-container {
+        width: 300px;
+    }
+}

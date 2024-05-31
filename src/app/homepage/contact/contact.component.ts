@@ -10,7 +10,7 @@ import { Post } from '../../interfaces/post';
   standalone: true,
   imports: [FormsModule, CommonModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrls: ['./contact.component.scss', './contact.component.media.scss']
 })
 export class ContactComponent {
   http: HttpClient = inject(HttpClient);
@@ -22,7 +22,7 @@ export class ContactComponent {
   };
 
   post: Post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://vitalij-schwab.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -32,7 +32,7 @@ export class ContactComponent {
     },
   };
 
-  mailTest: boolean = true;
+  mailTest: boolean = false;
   isChecked: boolean = false;
   showErrorCheckbox: boolean = false;
   isSubmitted: boolean = false;

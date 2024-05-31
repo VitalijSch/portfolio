@@ -7,7 +7,7 @@
     </div>
     @for (work of myWorks; track $index) {
     <div [ngClass]="{ 'reverse-element': $index % 2 !== 0 }" class="project-container">
-        <img class="animation{{$index}}" src="./assets/img/my_work/project_{{work.img}}.png" alt="project">
+        <a href="{{work.url}}" target="_blank"><img src="./assets/img/my_work/project_{{work.img}}.png" alt="project"></a>
         <div [ngClass]="{ 'reverse-content': $index % 2 !== 0 }">
             <h3>{{work.title}}</h3>
             <span>{{work.languages}}</span>

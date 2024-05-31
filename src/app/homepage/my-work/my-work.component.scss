@@ -31,15 +31,18 @@
     z-index: 1;
 
 
-    >img {
-        width: 620px;
-        height: 393px;
-        box-shadow: 5px 5px 15px 0px #00000026;
-        transition: transform 0.3s ease;
-        cursor: pointer;
+    >a {
+        
+        >img {
+            width: 620px;
+            height: 393px;
+            box-shadow: 5px 5px 15px 0px #00000026;
+            transition: transform 0.3s ease;
+            cursor: pointer;
 
-        &:hover {
-            transform: translateY(-50px) scale(1.1);
+            &:hover {
+                transform: translateY(-50px) scale(1.1);
+            }
         }
     }
 
@@ -118,7 +121,7 @@
     flex-direction: row-reverse;
 }
 
-.animation1{
+.animation1 {
     animation: gAnimation linear forwards;
     animation-timeline: scroll();
     animation-range: contain;

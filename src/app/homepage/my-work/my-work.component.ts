@@ -15,19 +15,22 @@ export class MyWorkComponent {
       img: 0,
       title: 'Join',
       languages: 'HTML | CSS | JavaScript',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.'
+      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      url: 'https://join.vitalij-schwab.com',
     },
     {
       img: 1,
       title: 'El Pollo Loco',
       languages: 'HTML | CSS | JavaScript',
-      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.'
+      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      url: 'https://el-pollo-loco.vitalij-schwab.com',
     },
     {
       img: 2,
       title: 'Pokedex',
       languages: 'HTML | CSS | JavaScript | Api',
-      description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.'
+      description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+      url: 'https://pokedex.vitalij-schwab.com',
     }
   ];
 

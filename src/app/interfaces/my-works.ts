@@ -3,4 +3,5 @@ export interface MyWorks {
     title: string;
     languages: string;
     description: string;
+    url: string;
 }
