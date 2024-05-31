@@ -7,7 +7,7 @@ import { MyWorks } from '../../interfaces/my-works';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './my-work.component.html',
-  styleUrl: './my-work.component.scss'
+  styleUrls: ['./my-work.component.scss', './my-work.component.media.scss']
 })
 export class MyWorkComponent implements AfterViewInit {
   myWorks: MyWorks[] = [

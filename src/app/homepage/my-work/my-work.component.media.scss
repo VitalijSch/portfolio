@@ -1,0 +1,187 @@
+@media(max-width: 1230px) {
+    .my-work-container {
+
+        >h2 {
+            width: 620px;
+            margin: 0 auto;
+            z-index: 1;
+        }
+
+        >.description {
+            width: 620px;
+            margin: 0 auto;
+            z-index: 1;
+        }
+    }
+}
+
+@media(max-width: 1000px) {
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+        width: 620px;
+        align-self: center;
+        row-gap: 30px;
+
+        >div {
+            align-items: center;
+            width: 100%;
+        }
+    }
+
+    .github-button {
+        display: none;
+    }
+
+    .mobile-button-container {
+        display: flex;
+    }
+
+    .background0 {
+        left: 663px;
+    }
+
+    .background3 {
+        width: 500px;
+        height: 500px;
+        top: 850px;
+    }
+}
+
+@media(max-width: 850px) {
+    .my-work-container {
+        padding: 100px 20px;
+    }
+}
+
+@media(max-width: 700px) {
+    .my-work-container {
+
+        >h2 {
+            width: 450px;
+        }
+
+        >.description {
+            width: 450px;
+        }
+    }
+
+    .project-container {
+        width: 450px;
+
+        img {
+            height: auto;
+        }
+    }
+
+    .animated-element {
+        transform: translateX(-25%) !important;
+    }
+
+    .appear {
+        width: 450px;
+        transform: translateX(0) !important;
+    }
+}
+
+@media(max-width: 480px) {
+    .my-work-container {
+
+        >h2 {
+            width: 340px;
+            font-size: 64px;
+        }
+
+        >.description {
+            width: 340px;
+        }
+    }
+
+    .project-container {
+        width: 340px;
+
+        img {
+            height: 215px;
+        }
+    }
+
+    .appear {
+        width: 340px;
+    }
+
+    .mobile-button-container {
+        padding: 0;
+    }
+
+    .reverse-content {
+        text-align: start;
+    }
+
+    .background0 {
+        width: 45px;
+        height: 45px;
+        top: 50px;
+        left: 263px;
+    }
+
+    .background1 {
+        width: 70px;
+        height: 70px;
+        top: 330px;
+        right: 40px;
+    }
+
+    .background2 {
+        width: 250px;
+        height: 250px;
+        top: 520px;
+        left: -120px;
+    }
+
+    .background3 {
+        width: 300px;
+        height: 300px;
+        top: 942px;
+        right: -100px;
+    }
+
+    .background4 {
+        top: 1190px;
+    }
+}
+
+@media(max-width: 400px) {
+    .my-work-container {
+
+        >h2 {
+            width: 300px;
+        }
+
+        >.description {
+            width: 300px;
+        }
+    }
+
+    .project-container {
+        width: 300px;
+        padding: 0 10px;
+    }
+
+    .appear {
+        width: 300px;
+    }
+
+    .background2 {
+        top: 500px;
+    }
+}
+
+@media(max-width: 340px) {
+    .animated-element {
+        transform: translateX(-25%) !important;
+    }
+
+    .appear {
+        transform: translateX(0) !important;
+    }
+}
