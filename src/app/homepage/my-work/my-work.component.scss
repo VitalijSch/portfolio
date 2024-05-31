@@ -30,19 +30,15 @@
     margin-bottom: 50px;
     z-index: 1;
 
+    img {
+        width: 620px;
+        height: 393px;
+        box-shadow: 5px 5px 15px 0px #00000026;
+        transition: transform 0.3s ease;
+        cursor: pointer;
 
-    >a {
-        
-        >img {
-            width: 620px;
-            height: 393px;
-            box-shadow: 5px 5px 15px 0px #00000026;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-
-            &:hover {
-                transform: translateY(-50px) scale(1.1);
-            }
+        &:hover {
+            transform: translateY(-50px) scale(1.1);
         }
     }
 
@@ -90,24 +86,11 @@
     justify-content: space-between;
     padding: 0 50px;
 
-    >button {
+    button {
         padding: 13px 24px;
         border-radius: 10px;
         font-size: 23px;
         cursor: pointer;
-
-        &:first-child {
-            background-color: #5988FF;
-            color: white;
-            border: unset;
-        }
-
-        &:last-child {
-            background-color: white;
-            color: #5988FF;
-            border: 2px solid #5988FF;
-            box-shadow: 5px 5px 15px 0px #00000026;
-        }
 
         &:hover {
             color: #FFFFFF;
@@ -115,6 +98,19 @@
             animation: gradient-animation 0.05s ease-in-out forwards;
         }
     }
+}
+
+.live-text-button {
+    background-color: #5988FF;
+    color: white;
+    border: unset;
+}
+
+.github-button-mobile {
+    background-color: white;
+    color: #5988FF;
+    border: 2px solid #5988FF;
+    box-shadow: 5px 5px 15px 0px #00000026;
 }
 
 .reverse-element {
@@ -251,7 +247,7 @@
     .project-container {
         width: 450px;
 
-        >img {
+        img {
             width: 450px;
             height: auto;
         }
@@ -274,7 +270,7 @@
     .project-container {
         width: 340px;
 
-        >img {
+        img {
             width: 340px;
             height: 215px;
         }
@@ -337,7 +333,7 @@
         width: 300px;
         padding: 0 10px;
 
-        >img {
+        img {
             width: 300px;
         }
     }

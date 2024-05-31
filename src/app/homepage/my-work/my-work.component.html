@@ -14,8 +14,8 @@
             <p>{{work.description}}</p>
             <button (click)="goToPage(work.title)" class="github-button">GitHub</button>
             <div class="mobile-button-container">
-                <button>Live test</button>
-                <button (click)="goToPage(work.title)">GitHub</button>
+                <a href="{{work.url}}" target="_blank"><button class="live-text-button">Live test</button></a>
+                <button (click)="goToPage(work.title)" class="github-button-mobile">GitHub</button>
             </div>
         </div>
     </div>
