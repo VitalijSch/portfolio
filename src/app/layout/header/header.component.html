@@ -1,9 +1,11 @@
 <nav>
-    <img (click)="reloadHomepage()" src="./assets/img/logo.png" alt="logo white">
+    <img (click)="showHomepage()" src="./assets/img/logo.png" alt="logo white">
     <div>
-        <a href="#aboutMe">About me</a>
-        <a href="#skillSet">Skill set</a>
-        <a href="#myWork">My work</a>
+        <a i18n href="#aboutMe">About me</a>
+        <a i18n href="#skillSet">Skill set</a>
+        <a i18n href="#myWork">My work</a>
+        <span class="langDe" (click)="changeLanguage('de-DE')">DE</span>
+        <span class="langEn" (click)="changeLanguage('en-US')">EN</span>
     </div>
     <img (click)="handleMenuBarMobile()" src="./assets/img/header/burger_menu.png" alt="burger menu">
 </nav>
@@ -13,9 +15,11 @@
         <img (click)="handleMenuBarMobile()" src="./assets/img/header/close.png" alt="close">
     </div>
     <div>
-        <a (click)="handleMenuBarMobile()" href="#aboutMe">About me</a>
-        <a (click)="handleMenuBarMobile()" href="#skillSet">Skill set</a>
-        <a (click)="handleMenuBarMobile()" href="#myWork">My work</a>
-        <a (click)="handleMenuBarMobile()" href="#contact">Contact</a>
+        <span class="langDe" (click)="changeLanguage('de-DE')">DE</span>
+        <span class="langEn" (click)="changeLanguage('en-US')">EN</span>
+        <a i18n (click)="handleMenuBarMobile()" href="#aboutMe">About me</a>
+        <a i18n (click)="handleMenuBarMobile()" href="#skillSet">Skill set</a>
+        <a i18n (click)="handleMenuBarMobile()" href="#myWork">My work</a>
+        <a i18n (click)="handleMenuBarMobile()" href="#contact">Contact</a>
     </div>
 </div>

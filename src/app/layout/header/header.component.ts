@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -11,11 +12,17 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   private showMenuBar: boolean = false;
 
-  public reloadHomepage() {
-    window.location.href = '/';
+  public changeLanguage(language: string): void {
+    window.location.href = (`https://vitalij-schwab.com/${language}`);
   }
 
-  public handleMenuBarMobile() {
+  constructor(private router: Router) { }
+
+  public showHomepage(): void {
+    this.router.navigate(['/']);
+  }
+
+  public handleMenuBarMobile(): void {
     this.showMenuBar = !this.showMenuBar;
     if (this.showMenuBar) {
       document.body.style.overflowY = 'hidden';
@@ -24,7 +31,7 @@ export class HeaderComponent {
     }
   }
 
-  public slideMenuBar() {
+  public slideMenuBar(): string {
     if (this.showMenuBar) {
       return 'menu-bar-mobile-container slide-from-right'
     } else {

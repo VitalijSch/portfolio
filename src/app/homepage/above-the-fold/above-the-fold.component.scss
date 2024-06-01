@@ -201,7 +201,7 @@
     }
 }
 
-@media(max-width: 670px) {
+@media(max-width: 690px) {
     .right-container {
 
         >div {
@@ -216,7 +216,7 @@
 
 @media(max-width: 580px) {
     .background-img {
-        left: -250px;
+        left: -210px;
         width: 670px;
     }
 
@@ -227,7 +227,7 @@
 
 @media(max-width: 480px) {
     .background-img {
-        left: -250px;
+        left: -240px;
         width: 550px;
     }
 
@@ -246,7 +246,8 @@
 
 @media(max-width: 372px) {
     .background-img {
-        width: 540px;
+        top: -50px;
+        width: 550px;
     }
 }
 

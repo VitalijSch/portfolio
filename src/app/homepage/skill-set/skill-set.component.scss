@@ -71,7 +71,7 @@
     }
 }
 
-@media(max-width: 480px) {
+@media(max-width: 550px) {
     .skill-set-container {
 
         >h2 {
@@ -89,6 +89,15 @@
                     height: 55px;
                 }
             }
+        }
+    }
+}
+
+@media(max-width: 360px) {
+    .skill-set-container {
+
+        >h2 {
+            font-size: 56px;
         }
     }
 }

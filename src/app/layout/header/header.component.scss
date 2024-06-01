@@ -30,29 +30,18 @@ nav {
     }
 
     >div {
+        width: 550px;
         display: flex;
         position: relative;
+        gap: 20px;
 
-        >div {
+        >span {
+            position: absolute;
+            bottom: -50px;
+            cursor: pointer;
 
-            >.language {
-                position: absolute;
-                top: 40px;
-                z-index: 2;
-                font-size: 23px;
-                cursor: pointer;
-
-                &:first-child {
-                    right: 60px;
-                }
-
-                &:last-child {
-                    right: 0px;
-                }
-
-                &:hover {
-                    font-weight: 700;
-                }
+            &:hover {
+                font-weight: 700;
             }
         }
     }
@@ -65,10 +54,19 @@ a {
     text-align: end;
     z-index: 2;
     font-size: 23px;
+    width: 100%;
 
     &:hover {
         font-weight: 700;
     }
+}
+
+.langEn {
+    right: 50px;
+}
+
+.langDe {
+    right: 0;
 }
 
 .menu-bar-mobile-container {
@@ -77,7 +75,7 @@ a {
     right: -200%;
     bottom: 0;
     left: 0;
-    z-index: 6;
+    z-index: 10;
     max-width: 1440px;
     width: 100%;
     display: flex;
@@ -85,7 +83,7 @@ a {
     align-items: center;
     padding: 0 100px;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
     transition: right 0.3s ease;
 
     >div {
@@ -114,6 +112,25 @@ a {
             gap: 29px;
         }
 
+        span {
+            position: absolute;
+            right: 100px;
+            color: #5988FF;
+            cursor: pointer;
+
+            &:hover {
+                font-weight: 700;
+            }
+        }
+
+        .langDe {
+            top: 150px;
+        }
+
+        .langEn {
+            top: 200px;
+        }
+
         a {
             text-align: center;
             color: #5988FF;
@@ -127,7 +144,7 @@ a {
     right: 0;
 }
 
-@media(max-width: 1000px) {
+@media(max-width: 1170px) {
     nav {
 
         >img {
@@ -150,6 +167,13 @@ a {
 
     .menu-bar-mobile-container {
         padding: 0 20px;
+
+        >div {
+
+            span {
+                right: 20px;
+            }
+        }
     }
 }
 

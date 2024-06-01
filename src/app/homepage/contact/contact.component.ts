@@ -4,6 +4,7 @@ import { ContactData } from '../../interfaces/contact-data';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { Post } from '../../interfaces/post';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -14,6 +15,9 @@ import { Post } from '../../interfaces/post';
 })
 export class ContactComponent {
   http: HttpClient = inject(HttpClient);
+  buttonName: string = $localize`Say hello ;)`;
+  isPrivacyPolicy: string = $localize`privacy policy`;
+  currentEndPoint: string = '';
 
   contactData: ContactData = {
     name: '',
@@ -21,8 +25,12 @@ export class ContactComponent {
     message: '',
   };
 
+  constructor(private router: Router) {
+    this.currentUrl();
+  }
+
   post: Post = {
-    endPoint: 'https://vitalij-schwab.com/sendMail.php',
+    endPoint: `${this.currentEndPoint}sendMail.php`,
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -37,7 +45,16 @@ export class ContactComponent {
   showErrorCheckbox: boolean = false;
   isSubmitted: boolean = false;
 
-  public onSubmit(ngForm: NgForm) {
+  private currentUrl(): void {
+    const url = window.location.href;
+    if (url.includes('en-US')) {
+      this.currentEndPoint = 'https://vitalij-schwab.com/en-US/';
+    } else if (url.includes('de-DE')) {
+      this.currentEndPoint = 'https://vitalij-schwab.com/de-DE/';
+    }
+  }
+
+  public onSubmit(ngForm: NgForm): void {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       if (this.isChecked) {
         this.submitContactForm(ngForm);
@@ -53,7 +70,7 @@ export class ContactComponent {
     }
   }
 
-  private submitContactForm(ngForm: NgForm) {
+  private submitContactForm(ngForm: NgForm): void {
     this.http.post(this.post.endPoint, this.post.body(this.contactData))
       .subscribe({
         next: (response) => {
@@ -69,24 +86,28 @@ export class ContactComponent {
     this.showErrorCheckbox = false;
   }
 
-  private resetFormAndCheckboxes(ngForm: NgForm) {
+  private resetFormAndCheckboxes(ngForm: NgForm): void {
     ngForm.resetForm();
     this.handleCheckbox();
     this.showFeedback();
     this.showErrorCheckbox = false;
   }
 
-  private showFeedback() {
+  private showFeedback(): void {
     this.isSubmitted = true;
     setTimeout(() => {
       this.isSubmitted = false;
     }, 2000);
   }
 
-  public handleCheckbox() {
+  public handleCheckbox(): void {
     this.isChecked = !this.isChecked;
     if (this.isChecked) {
       this.showErrorCheckbox = false;
     }
+  }
+
+  public showPrivacyPolicy(): void {
+    this.router.navigate(['/privacy-policy']);
   }
 }

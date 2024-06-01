@@ -15,21 +15,21 @@ export class MyWorkComponent implements AfterViewInit {
       img: 0,
       title: 'Join',
       languages: 'HTML | CSS | JavaScript',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      description: $localize`Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.`,
       url: 'https://join.vitalij-schwab.com',
     },
     {
       img: 1,
       title: 'El Pollo Loco',
       languages: 'HTML | CSS | JavaScript',
-      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      description: $localize`Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.`,
       url: 'https://el-pollo-loco.vitalij-schwab.com',
     },
     {
       img: 2,
       title: 'Pokedex',
       languages: 'HTML | CSS | JavaScript | Api',
-      description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+      description: $localize`Based on the PokéAPI a simple library that provides and catalogues pokemon information.`,
       url: 'https://pokedex.vitalij-schwab.com',
     }
   ];
@@ -40,6 +40,7 @@ export class MyWorkComponent implements AfterViewInit {
     const options = {
       threshold: 0.5,
     };
+
     const callback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -49,13 +50,14 @@ export class MyWorkComponent implements AfterViewInit {
         }
       });
     };
+
     const observer = new IntersectionObserver(callback, options);
     this.animatedElements.forEach((animatedElement) => {
       observer.observe(animatedElement.nativeElement);
     });
   }
 
-  public goToPage(title: string) {
+  public goToPage(title: string): void {
     if (title === 'Join') {
       window.open('https://github.com/VitalijSch/join', '_blank');
     } else if (title === 'El Pollo Loco') {
@@ -64,6 +66,4 @@ export class MyWorkComponent implements AfterViewInit {
       window.open('https://github.com/VitalijSch/Pokedex', '_blank');
     }
   }
-
-
 }
