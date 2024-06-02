@@ -25,10 +25,18 @@ export class ContactComponent {
     message: '',
   };
 
+  mailTest: boolean = false;
+  isChecked: boolean = false;
+  showErrorCheckbox: boolean = false;
+  isSubmitted: boolean = false;
+
   constructor(private router: Router) {
     this.currentUrl();
   }
 
+  /**
+   * Represents a POST request configuration for sending contact form data.
+   */
   post: Post = {
     endPoint: `${this.currentEndPoint}sendMail.php`,
     body: (payload: any) => JSON.stringify(payload),
@@ -40,11 +48,10 @@ export class ContactComponent {
     },
   };
 
-  mailTest: boolean = false;
-  isChecked: boolean = false;
-  showErrorCheckbox: boolean = false;
-  isSubmitted: boolean = false;
-
+  /**
+   * Sets the current endpoint based on the URL's language parameter.
+   * @returns {void}
+   */
   private currentUrl(): void {
     const url = window.location.href;
     if (url.includes('en-US')) {
@@ -54,6 +61,11 @@ export class ContactComponent {
     }
   }
 
+  /**
+   * Submits the contact form if valid and not in test mode.
+   * @param {NgForm} ngForm - The Angular form to submit.
+   * @returns {void}
+   */
   public onSubmit(ngForm: NgForm): void {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       if (this.isChecked) {
@@ -70,6 +82,11 @@ export class ContactComponent {
     }
   }
 
+  /**
+   * Submits the contact form data via HTTP POST request.
+   * @param {NgForm} ngForm - The Angular form containing contact data.
+   * @returns {void}
+   */
   private submitContactForm(ngForm: NgForm): void {
     this.http.post(this.post.endPoint, this.post.body(this.contactData))
       .subscribe({
@@ -86,6 +103,11 @@ export class ContactComponent {
     this.showErrorCheckbox = false;
   }
 
+  /**
+   * Resets the form and checkboxes after successful form submission.
+   * @param {NgForm} ngForm - The Angular form to reset.
+   * @returns {void}
+   */
   private resetFormAndCheckboxes(ngForm: NgForm): void {
     ngForm.resetForm();
     this.handleCheckbox();
@@ -93,6 +115,10 @@ export class ContactComponent {
     this.showErrorCheckbox = false;
   }
 
+  /**
+   * Displays feedback to the user after form submission.
+   * @returns {void}
+   */
   private showFeedback(): void {
     this.isSubmitted = true;
     setTimeout(() => {
@@ -100,6 +126,10 @@ export class ContactComponent {
     }, 2000);
   }
 
+  /**
+   * Toggles the checkbox state.
+   * @returns {void}
+   */
   public handleCheckbox(): void {
     this.isChecked = !this.isChecked;
     if (this.isChecked) {
@@ -107,6 +137,10 @@ export class ContactComponent {
     }
   }
 
+  /**
+   * Navigates to the privacy policy page.
+   * @returns {void}
+   */
   public showPrivacyPolicy(): void {
     this.router.navigate(['/privacy-policy']);
   }

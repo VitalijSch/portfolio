@@ -36,6 +36,10 @@ export class MyWorkComponent implements AfterViewInit {
 
   @ViewChildren('animatedElement') animatedElements!: ElementRef[];
 
+  /**
+   * Intersects with the animated elements and adds or removes the 'appear' class based on their visibility.
+   * @returns {void}
+   */
   ngAfterViewInit(): void {
     const options = {
       threshold: 0.5,
@@ -57,6 +61,11 @@ export class MyWorkComponent implements AfterViewInit {
     });
   }
 
+  /**
+   * Opens a GitHub repository page in a new tab based on the provided title.
+   * @param {string} title - The title of the GitHub repository.
+   * @returns {void}
+   */
   public goToPage(title: string): void {
     if (title === 'Join') {
       window.open('https://github.com/VitalijSch/join', '_blank');
