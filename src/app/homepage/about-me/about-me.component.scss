@@ -103,6 +103,8 @@
 
 @media(max-width: 550px) {
     .aboute-me-container {
+        animation: unset;
+        opacity: 1;
 
         span {
             font-size: 70px;
