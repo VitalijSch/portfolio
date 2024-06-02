@@ -1,0 +1,217 @@
+.project-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 80px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+
+    img {
+        height: 393px;
+        box-shadow: 5px 5px 15px 0px #00000026;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            transform: translateY(-50px) scale(1.1);
+        }
+    }
+
+    >div {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        >h3 {
+            font-size: 45px;
+            line-height: 45px;
+            color: #5988FF;
+            font-family: 'Baloo 2';
+        }
+
+        >span {
+            font-size: 23px;
+            color: #5988FF;
+        }
+
+        >.github-button {
+            width: 137px;
+            font-size: 23px;
+            background-color: white;
+            color: #5988FF;
+            border: 2px solid #5988FF;
+            box-shadow: 5px 5px 15px 0px #00000026;
+            padding: 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+
+            &:hover {
+                color: #FFFFFF;
+                transform: scale(1.1);
+                animation: gradient-animation 0.05s ease-in-out forwards;
+            }
+        }
+    }
+}
+
+.mobile-button-container {
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+    padding: 0 50px;
+
+    button {
+        padding: 13px 24px;
+        border-radius: 10px;
+        font-size: 23px;
+        cursor: pointer;
+
+        &:hover {
+            color: #FFFFFF;
+            transform: scale(1.1);
+            animation: gradient-animation 0.05s ease-in-out forwards;
+        }
+    }
+}
+
+.live-text-button {
+    background-color: #5988FF;
+    color: white;
+    border: unset;
+}
+
+.github-button-mobile {
+    background-color: white;
+    color: #5988FF;
+    border: 2px solid #5988FF;
+    box-shadow: 5px 5px 15px 0px #00000026;
+}
+
+.reverse-element {
+    flex-direction: row-reverse;
+}
+
+.animated-element {
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.appear {
+    width: 620px;
+    opacity: 1;
+    transform: translateX(0) !important;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-50px) scale(1.1) !important;
+    }
+}
+
+.reverse-content {
+    align-items: end;
+    text-align: end;
+}
+
+@media(max-width: 1000px) {
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+        width: 620px;
+        margin: 0 auto;
+        row-gap: 30px;
+
+        >div {
+            align-items: center;
+            width: 100%;
+
+            >span {
+                text-align: center;
+            }
+
+            >p {
+                text-align: center;
+            }
+        }
+    }
+
+    .github-button {
+        display: none;
+    }
+
+    .mobile-button-container {
+        display: flex;
+    }
+}
+
+@media(max-width: 700px) {
+    .project-container {
+        width: 450px;
+
+        img {
+            height: auto;
+        }
+    }
+
+    .animated-element {
+        transform: translateX(-25%) !important;
+    }
+
+    .appear {
+        width: 450px;
+        transform: translateX(0) !important;
+    }
+}
+
+@media(max-width: 480px) {
+    .project-container {
+        width: 340px;
+
+        img {
+            height: 215px;
+        }
+    }
+
+    .appear {
+        width: 340px;
+    }
+
+    .mobile-button-container {
+        padding: 0;
+    }
+
+    .reverse-content {
+        text-align: start;
+    }
+}
+
+@media(max-width: 400px) {
+    .project-container {
+        width: 300px;
+        padding: 0 10px;
+    }
+
+    .appear {
+        width: 300px;
+    }
+}
+
+@media(max-width: 340px) {
+    .project-container {
+        width: 100%;
+    }
+
+    .animated-element {
+        transform: translateX(-25%) !important;
+    }
+
+    .appear {
+        transform: translateX(0) !important;
+    }
+
+    .mobile-button-container {
+        width: 102%;
+    }
+}

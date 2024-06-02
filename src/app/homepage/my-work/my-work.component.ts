@@ -1,15 +1,17 @@
-import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, ViewChildren } from '@angular/core';
+import { Component } from '@angular/core';
 import { MyWorks } from '../../interfaces/my-works';
+import { ProjectComponent } from './project/project.component';
 
 @Component({
   selector: 'app-my-work',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    ProjectComponent
+  ],
   templateUrl: './my-work.component.html',
-  styleUrls: ['./my-work.component.scss', './my-work.component.media.scss']
+  styleUrl: './my-work.component.scss'
 })
-export class MyWorkComponent implements AfterViewInit {
+export class MyWorkComponent {
   myWorks: MyWorks[] = [
     {
       img: 0,
@@ -33,46 +35,4 @@ export class MyWorkComponent implements AfterViewInit {
       url: 'https://pokedex.vitalij-schwab.com',
     }
   ];
-
-  @ViewChildren('animatedElement') animatedElements!: ElementRef[];
-
-  /**
-   * Intersects with the animated elements and adds or removes the 'appear' class based on their visibility.
-   * @returns {void}
-   */
-  ngAfterViewInit(): void {
-    const options = {
-      threshold: 0.5,
-    };
-
-    const callback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('appear');
-        } else {
-          entry.target.classList.remove('appear');
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(callback, options);
-    this.animatedElements.forEach((animatedElement) => {
-      observer.observe(animatedElement.nativeElement);
-    });
-  }
-
-  /**
-   * Opens a GitHub repository page in a new tab based on the provided title.
-   * @param {string} title - The title of the GitHub repository.
-   * @returns {void}
-   */
-  public goToPage(title: string): void {
-    if (title === 'Join') {
-      window.open('https://github.com/VitalijSch/join', '_blank');
-    } else if (title === 'El Pollo Loco') {
-      window.open('https://github.com/VitalijSch/El-Pollo-Loco', '_blank');
-    } else if (title === 'Pokedex') {
-      window.open('https://github.com/VitalijSch/Pokedex', '_blank');
-    }
-  }
 }

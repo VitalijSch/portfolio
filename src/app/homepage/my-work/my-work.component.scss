@@ -19,123 +19,8 @@
     >.description {
         width: 673px;
         font-size: 23px;
+        z-index: 2;
     }
-}
-
-.project-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 80px;
-    margin-bottom: 50px;
-    z-index: 1;
-
-    img {
-        height: 393px;
-        box-shadow: 5px 5px 15px 0px #00000026;
-        transition: transform 0.3s ease;
-        cursor: pointer;
-
-        &:hover {
-            transform: translateY(-50px) scale(1.1);
-        }
-    }
-
-    >div {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-
-        >h3 {
-            font-size: 45px;
-            line-height: 45px;
-            color: #5988FF;
-            font-family: 'Baloo 2';
-        }
-
-        >span {
-            font-size: 23px;
-            color: #5988FF;
-        }
-
-        >.github-button {
-            width: 137px;
-            font-size: 23px;
-            background-color: white;
-            color: #5988FF;
-            border: 2px solid #5988FF;
-            box-shadow: 5px 5px 15px 0px #00000026;
-            padding: 15px 30px;
-            border-radius: 10px;
-            cursor: pointer;
-
-            &:hover {
-                color: #FFFFFF;
-                transform: scale(1.1);
-                animation: gradient-animation 0.05s ease-in-out forwards;
-            }
-        }
-    }
-}
-
-.mobile-button-container {
-    width: 100%;
-    display: none;
-    justify-content: space-between;
-    padding: 0 50px;
-
-    button {
-        padding: 13px 24px;
-        border-radius: 10px;
-        font-size: 23px;
-        cursor: pointer;
-
-        &:hover {
-            color: #FFFFFF;
-            transform: scale(1.1);
-            animation: gradient-animation 0.05s ease-in-out forwards;
-        }
-    }
-}
-
-.live-text-button {
-    background-color: #5988FF;
-    color: white;
-    border: unset;
-}
-
-.github-button-mobile {
-    background-color: white;
-    color: #5988FF;
-    border: 2px solid #5988FF;
-    box-shadow: 5px 5px 15px 0px #00000026;
-}
-
-.reverse-element {
-    flex-direction: row-reverse;
-}
-
-.animated-element {
-    opacity: 0;
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-}
-
-.appear {
-    width: 620px;
-    opacity: 1;
-    transform: translateX(0) !important;
-    transition: transform 0.3s ease;
-
-    &:hover {
-        transform: translateY(-50px) scale(1.1) !important;
-    }
-}
-
-.reverse-content {
-    align-items: end;
-    text-align: end;
 }
 
 .background0 {
@@ -184,4 +69,121 @@
     position: absolute;
     bottom: 20px;
     left: 620px;
+}
+
+@media(max-width: 1230px) {
+    .my-work-container {
+
+        >h2 {
+            width: 620px;
+            margin: 0 auto;
+        }
+
+        >.description {
+            width: 620px;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media(max-width: 1000px) {
+    .background0 {
+        left: 663px;
+    }
+
+    .background3 {
+        width: 500px;
+        height: 500px;
+        top: 850px;
+    }
+}
+
+@media(max-width: 850px) {
+    .my-work-container {
+        padding: 100px 20px;
+    }
+}
+
+@media(max-width: 700px) {
+    .my-work-container {
+
+        >h2 {
+            width: 450px;
+        }
+
+        >.description {
+            width: 450px;
+        }
+    }
+
+    .background3 {
+        right: -270px;
+    }
+}
+
+@media(max-width: 480px) {
+    .my-work-container {
+
+        >h2 {
+            width: 340px;
+            font-size: 64px;
+        }
+
+        >.description {
+            width: 340px;
+        }
+    }
+
+    .background0 {
+        width: 45px;
+        height: 45px;
+        top: 50px;
+        left: 263px;
+    }
+
+    .background1 {
+        width: 70px;
+        height: 70px;
+        top: 330px;
+        right: 40px;
+    }
+
+    .background2 {
+        width: 250px;
+        height: 250px;
+        top: 520px;
+        left: -120px;
+    }
+
+    .background3 {
+        width: 300px;
+        height: 300px;
+        top: 942px;
+        right: -100px;
+    }
+
+    .background4 {
+        top: 1190px;
+    }
+}
+
+@media(max-width: 400px) {
+    .my-work-container {
+
+        >h2 {
+            width: 300px;
+        }
+
+        >.description {
+            width: 300px;
+        }
+    }
+
+    .background2 {
+        top: 500px;
+    }
+
+    .background3{
+        right: -150px;
+    }
 }
