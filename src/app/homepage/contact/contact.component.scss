@@ -146,6 +146,14 @@ form {
     }
 }
 
+input {
+    height: 50px;
+}
+
+textarea{
+    height: 200px;
+}
+
 .disabled-button {
     color: #BBBBBB;
     border: 2px solid #BBBBBB;
@@ -253,14 +261,20 @@ textarea:focus::placeholder {
 }
 
 .feedback-container {
+    width: 750px;
+    height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-image: url(./../../../assets/img/ball.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     >span {
         text-align: center;
-        color: #5988FF;
+        color: white;
         font-size: 40px;
         font-weight: 900;
     }

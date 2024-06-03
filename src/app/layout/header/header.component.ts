@@ -20,7 +20,14 @@ export class HeaderComponent {
    * @returns {void}
    */
   public changeLanguage(language: string): void {
-    window.location.href = (`https://vitalij-schwab.com/${language}`);
+    const url = window.location.href;
+    if (url.includes('/imprint')) {
+      this.router.navigateByUrl(`${language}/imprint`);
+    } else if (url.includes('/privacy-policy')) {
+      this.router.navigateByUrl(`${language}/privacy-policy`);
+    } else {
+      this.router.navigateByUrl('');
+    }
   }
 
   /**

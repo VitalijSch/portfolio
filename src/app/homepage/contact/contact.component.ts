@@ -25,7 +25,7 @@ export class ContactComponent {
     message: '',
   };
 
-  mailTest: boolean = false;
+  mailTest: boolean = true;
   isChecked: boolean = false;
   showErrorCheckbox: boolean = false;
   isSubmitted: boolean = false;

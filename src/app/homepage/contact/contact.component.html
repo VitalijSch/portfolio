@@ -16,7 +16,7 @@
                 <a class="arrow-top" href="#aboveTheFold"></a>
             </div>
             <div class="right-container">
-                <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+                <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
                     <div class="input-container">
                         <div class="valid-container" [ngClass]="{
                             'error-img': !name.valid && name.touched && !name.disabled,
@@ -36,7 +36,7 @@
                                 'done-img': email.valid && email.touched && !email.disabled
                                 }"></div>
                         <input #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email" id="email"
-                            placeholder="" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+                        placeholder="" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
                         <label i18n for="email">Your email</label>
                         @if (!email.valid && email.touched && !email.disabled) {
                         <span i18n class="error-message">Your email is required</span>
@@ -48,8 +48,7 @@
                             'done-img': message.valid && message.touched && !message.disabled
                             }"></div>
                         <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="message"
-                            rows="10" placeholder="" maxlength="400" pattern="[a-zA-Z0-9,.?!-\s\n]*"
-                            required></textarea>
+                            rows="10" placeholder="" maxlength="400" required></textarea>
                         <label i18n for="message">Your message</label>
                         @if (!message.valid && message.touched && !message.disabled) {
                         <span i18n class="error-message">Your message is required</span>
