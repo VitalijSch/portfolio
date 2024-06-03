@@ -12,7 +12,9 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   private showMenuBar: boolean = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    this.showCurrentRoute();
+  }
 
   /**
    * Changes the language of the website.
@@ -22,11 +24,18 @@ export class HeaderComponent {
   public changeLanguage(language: string): void {
     const url = window.location.href;
     if (url.includes('/imprint')) {
-      this.router.navigateByUrl(`${language}/imprint`);
+      localStorage.setItem('currentPage', '/imprint');
     } else if (url.includes('/privacy-policy')) {
-      this.router.navigateByUrl(`${language}/privacy-policy`);
-    } else {
-      this.router.navigateByUrl('');
+      localStorage.setItem('currentPage', '/privacy-policy');
+    }
+    window.location.href = `https://vitalij-schwab.com/${language}`;
+  }
+
+  public showCurrentRoute(): void {
+    const currentPage = localStorage.getItem('currentPage');
+    if (currentPage) {
+      this.router.navigateByUrl(`${currentPage}`);
+      localStorage.removeItem('currentPage');
     }
   }
 
