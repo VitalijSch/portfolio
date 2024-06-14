@@ -36,7 +36,7 @@
                                 'done-img': email.valid && email.touched && !email.disabled
                                 }"></div>
                         <input #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email" id="email"
-                        placeholder="" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                        placeholder="" pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" required>
                         <label i18n for="email">Your email</label>
                         @if (!email.valid && email.touched && !email.disabled) {
                         <span i18n class="error-message">Your email is required</span>
