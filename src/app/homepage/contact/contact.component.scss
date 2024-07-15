@@ -269,7 +269,7 @@ textarea:focus::placeholder {
     background-image: url(./../../../assets/img/ball.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 
     >span {
         text-align: center;

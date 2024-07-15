@@ -11,7 +11,7 @@
     },
     "aboutMe": {
         "header": "Let`s work <br> together",
-        "description": "I am a Front-end developer based in Lahr, in the Black Forest Germany.I enjoy helping designers and companies bring their ideas into real life. I am looking forward to continuing my developer career with a job in a junior web developer position. <br><br> If you think I`d be a good match for your projects, contact me!",
+        "description": "I am a Front-end developer based in Lahr, in the Black Forest Germany. I enjoy helping designers and companies bring their ideas into real life. I am looking forward to continuing my developer career with a job in a junior web developer position. <br><br> If you think I'd be a good match for your projects, contact me!",
         "button": "Send a message"
     },
     "skillSet": {
@@ -30,7 +30,7 @@
         "subHeader": "Got a problem to solve?",
         "description": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
         "text": "Need a Frontend developer?",
-        "smallText": "Contact me!",
+        "smallText": " Contact me!",
         "yourName": "Your name",
         "errorMessageName": "Your name is required",
         "email": "Your email",
