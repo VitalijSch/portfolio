@@ -2,10 +2,8 @@
     @for (img of [0,1,2,3,4,5]; track $index) {
     <img class="background{{img}}" src="./assets/img/ball.png" alt="ball">
     }
-    <h2 i18n>My work</h2>
-    <div i18n class="description">Explore a selection of my work here - Interact with projects to see my skills in
-        action.
-    </div>
+    <h2>{{'myWork.header' | translate}}</h2>
+    <div class="description">{{'myWork.description' | translate}}</div>
     @for (work of myWorks; track $index) {
     <app-project [work]="work" [index]="$index"></app-project>
     }

@@ -10,15 +10,6 @@
           "style": "scss"
         }
       },
-      "i18n": {
-        "sourceLocale": "en-US",
-        "locales": {
-          "de-DE": {
-            "translation": "src/locale/messages.de.xlf",
-            "baseHref": "de-DE/"
-          }
-        }
-      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -26,9 +17,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "localize": [
-              "de-DE"
-            ],
             "outputPath": "dist/portfolio",
             "index": "src/index.html",
             "browser": "src/main.ts",

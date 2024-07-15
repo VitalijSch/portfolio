@@ -1,0 +1,56 @@
+{
+    "header": {
+        "aboutMe": "Über mich",
+        "skillSet": "Fähigkeiten",
+        "myWork": "Meine Arbeit",
+        "contact": "Kontakt"
+    },
+    "aboveTheFold": {
+        "headerName": "Hallo! Ich bin Vitalij",
+        "headerTitle": "FRONTEND ENTWICKLER"
+    },
+    "aboutMe": {
+        "header": "Lasst uns <br> zusammenarbeiten",
+        "description": "Ich bin ein Front-End-Entwickler mit Sitz in Lahr/Schwarzwald. Mir macht es Freude, Designern und Unternehmen dabei zu helfen, ihre Ideen in die Realität umzusetzen. Ich freue mich darauf, meine Entwicklerkarriere mit einer Stelle als Junior-Webentwickler fortzusetzen. <br><br> Wenn Sie denken, dass ich gut zu Ihren Projekten passen könnte, kontaktieren Sie mich bitte!",
+        "button": "Nachricht senden"
+    },
+    "skillSet": {
+        "header": "Fähigkeiten"
+    },
+    "myWork": {
+        "header": "Meine Arbeit",
+        "description": "Erkunden Sie hier eine Auswahl meiner Arbeit - interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+        "daBubble": "Eine Chat-Messenger-App, die von Slack oder Discord inspiriert ist und es Benutzern ermöglicht, sich in Kanälen oder per Direktnachricht miteinander zu verbinden.",
+        "join": "Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+        "elPolloLoco": "Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Helfen Sie Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
+        "pokedex": "Basiert auf der PokéAPI, eine einfache Bibliothek, die Pokemon-Informationen bereitstellt und katalogisiert."
+    },
+    "contact": {
+        "header": "Kontakt",
+        "subHeader": "Hast du ein Problem zu lösen?",
+        "description": "Kontaktiere mich über dieses Formular. Ich freue mich darauf, von dir zu hören, deine Ideen kennenzulernen und mit meiner Arbeit zu deinen Projekten beizutragen.",
+        "text": "Brauchst du einen Frontend-Entwickler?",
+        "smallText": "Kontaktiere mich!",
+        "yourName": "Dein Name",
+        "errorMessageName": "Dein Name ist erforderlich",
+        "email": "Deine E-Mail",
+        "errorMessageEmal": "Deine E-Mail ist erforderlich",
+        "message": "Deine Nachricht",
+        "errorMessageMessage": "Deine Nachricht ist erforderlich",
+        "firstSpan": "Ich habe die",
+        "privacyPolicy": "Datenschutzrichtlinien",
+        "secondSpan": "gelesen und stimme der Verarbeitung meiner Daten zu.",
+        "errorMessagePrivacyPolicy": "Bitte akzeptiere die Datenschutzrichtlinien.",
+        "button": "Hallo ;)",
+        "successfullyMessage": "Vielen Dank!<br> Deine Nachricht wurde erfolgreich gesendet."
+    },
+    "footer": {
+        "imprint": "Impressum"
+    },
+    "imprint": {
+        "imprint": "Impressum",
+        "contact": "Kontakt",
+        "phone": "Telefon",
+        "source": "Quelle"
+    }
+}

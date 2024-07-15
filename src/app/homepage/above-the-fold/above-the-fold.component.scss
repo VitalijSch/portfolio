@@ -7,7 +7,6 @@
     max-width: 1440px;
     height: 100%;
     margin: 0 auto;
-    overflow: hidden;
 
     >div {
         width: 100%;
@@ -92,6 +91,12 @@
                 transform: translateX(-10px);
             }
         }
+    }
+}
+
+@media(max-width: 1440px) {
+    .above-the-fold-container {
+        overflow-x: hidden;
     }
 }
 

@@ -1,0 +1,56 @@
+{
+    "header": {
+        "aboutMe": "About me",
+        "skillSet": "Skill set",
+        "myWork": "My work",
+        "contact": "Contact"
+    },
+    "aboveTheFold": {
+        "headerName": "Hello! I am Vitalij",
+        "headerTitle": "FRONTEND DEVELOPER"
+    },
+    "aboutMe": {
+        "header": "Let`s work <br> together",
+        "description": "I am a Front-end developer based in Lahr, in the Black Forest Germany.I enjoy helping designers and companies bring their ideas into real life. I am looking forward to continuing my developer career with a job in a junior web developer position. <br><br> If you think I`d be a good match for your projects, contact me!",
+        "button": "Send a message"
+    },
+    "skillSet": {
+        "header": "Skill set"
+    },
+    "myWork": {
+        "header": "My work",
+        "description": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+        "daBubble": "A chat messenger app is inspired by Slack or Discord and allows users to communicate with each other through channels or direct messages.",
+        "join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+        "elPolloLoco": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+        "pokedex": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
+    },
+    "contact": {
+        "header": "Contact",
+        "subHeader": "Got a problem to solve?",
+        "description": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+        "text": "Need a Frontend developer?",
+        "smallText": "Contact me!",
+        "yourName": "Your name",
+        "errorMessageName": "Your name is required",
+        "email": "Your email",
+        "errorMessageEmal": "Your email is required",
+        "message": "Your message",
+        "errorMessageMessage": "Your message is required",
+        "firstSpan": "I've read the",
+        "privacyPolicy": "privacy policy",
+        "secondSpan": "and agree to the processing of my data as outlined.",
+        "errorMessagePrivacyPolicy": "Please accept the privacy policy.",
+        "button": "Say hello ;)",
+        "successfullyMessage": "Thank you very much!<br> Your message has been successfully submitted."
+    },
+    "footer": {
+        "imprint": "Imprint"
+    },
+    "imprint": {
+        "imprint": "Imprint",
+        "contact": "Contact",
+        "phone": "Phone",
+        "source": "Source"
+    }
+}

@@ -5,18 +5,26 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { Post } from '../../interfaces/post';
 import { Router } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslationService } from '../../services/translation/translation.service';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [
+    FormsModule,
+    CommonModule,
+    TranslateModule
+  ],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss', './contact.component.media.scss']
 })
 export class ContactComponent {
   http: HttpClient = inject(HttpClient);
-  buttonName: string = $localize`Say hello ;)`;
-  isPrivacyPolicy: string = $localize`privacy policy`;
+  translationService: TranslationService = inject(TranslationService);
+
+  buttonName: string = 'contact.button';
+  isPrivacyPolicy: string = 'contact.privacyPolicy';
   currentEndPoint: string = '';
 
   contactData: ContactData = {

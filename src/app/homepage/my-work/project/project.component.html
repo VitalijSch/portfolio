@@ -1,15 +1,26 @@
 <div [ngClass]="{ 'reverse-element': index % 2 !== 0 }" class="project-container">
-    <a href="{{work.url}}" target="_blank"><img #animatedElement
-            [ngStyle]="{ 'transform': (index % 2 !== 0) ? 'translateX(-50%)' : 'translateX(50%)' }"
-            class="animated-element" src="./assets/img/my_work/project_{{work.img}}.png" alt="project"></a>
+    <a [ngStyle]="{'cursor': index === 0 ? 'unset': 'pointer'}" (click)="index === 0 ? $event.preventDefault(): ''"
+        href="{{work.url}}" target="_blank">
+        <img #animatedElement [ngStyle]="{ 'transform': (index % 2 !== 0) ? 'translateX(-50%)' : 'translateX(50%)' }"
+            [class.wip-img]="index === 0" [class.animated-element]="index > 0"
+            src="./assets/img/my_work/project_{{work.img}}.png" alt="project">
+    </a>
     <div [ngClass]="{ 'reverse-content': index % 2 !== 0 }">
         <h3>{{work.title}}</h3>
         <span>{{work.languages}}</span>
-        <p>{{work.description}}</p>
-        <button (click)="goToPage(work.title)" class="github-button">GitHub</button>
+        <p>{{work.description | translate}}</p>
+        <button (click)="goToPage(work.title)" class="d-none" [class.wip-button]="index === 0"
+            [class.github-button]="index > 0" [disabled]="index === 0">GitHub</button>
         <div class="mobile-button-container">
-            <a href="{{work.url}}" target="_blank"><button i18n class="live-text-button">Live test</button></a>
-            <button (click)="goToPage(work.title)" class="github-button-mobile">GitHub</button>
+            <a href="{{work.url}}" target="_blank">
+                <button [ngStyle]="{'cursor': index === 0 ? 'unset': 'pointer'}" [class.wip-button]="index === 0"
+                    [class.live-text-button]="index > 0" [disabled]="index === 0">
+                    Live Test
+                </button>
+            </a>
+            <button [ngStyle]="{'cursor': index === 0 ? 'unset': 'pointer'}" (click)="goToPage(work.title)"
+                [class.wip-button]="index === 0" [class.github-button-mobile]="index > 0"
+                [disabled]="index === 0">GitHub</button>
         </div>
     </div>
 </div>

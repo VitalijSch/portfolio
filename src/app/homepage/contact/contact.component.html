@@ -3,16 +3,12 @@
         @for (img of [0,1]; track $index) {
         <img class="background{{img}}" src="./assets/img/ball.png" alt="ball">
         }
-        <h2 i18n>Contact</h2>
+        <h2>{{'contact.header' | translate}}</h2>
         <div class="main-container">
             <div class="left-container">
-                <h3 i18n>Got a problem to solve?</h3>
-                <p i18n>
-                    Contact me through this form, I am interested in hearing from you, knowing your ideas and
-                    contributing to
-                    your projects with my work.
-                </p>
-                <span i18n>Need a Frontend developer? <span>Contact me!</span></span>
+                <h3>{{'contact.subHeader' | translate}}</h3>
+                <p>{{'contact.description' | translate}}</p>
+                <span>{{'contact.text' | translate}}<span>{{'contact.smallText' | translate}}</span></span>
                 <a class="arrow-top" href="#aboveTheFold"></a>
             </div>
             <div class="right-container">
@@ -25,9 +21,9 @@
                         </div>
                         <input #name="ngModel" [(ngModel)]="contactData.name" type="text" name="name" id="name"
                             placeholder="" pattern="[a-zA-Z0-9 ]*" maxlength="50" required>
-                        <label i18n for="name">Your name</label>
+                        <label for="name">{{'contact.yourName' | translate}}</label>
                         @if (!name.valid && name.touched && !name.disabled) {
-                        <span i18n class="error-message">Your name is required</span>
+                        <span class="error-message">{{'contact.errorMessageName' | translate}}</span>
                         }
                     </div>
                     <div class="input-container">
@@ -36,10 +32,10 @@
                                 'done-img': email.valid && email.touched && !email.disabled
                                 }"></div>
                         <input #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email" id="email"
-                        placeholder="" pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" required>
-                        <label i18n for="email">Your email</label>
+                            placeholder="" pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" required>
+                        <label for="email">{{'contact.email' | translate}}</label>
                         @if (!email.valid && email.touched && !email.disabled) {
-                        <span i18n class="error-message">Your email is required</span>
+                        <span class="error-message">{{'contact.errorMessageEmail' | translate}}</span>
                         }
                     </div>
                     <div class="input-container">
@@ -49,9 +45,9 @@
                             }"></div>
                         <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="message"
                             rows="10" placeholder="" maxlength="400" required></textarea>
-                        <label i18n for="message">Your message</label>
+                        <label for="message">{{'contact.message' | translate}}</label>
                         @if (!message.valid && message.touched && !message.disabled) {
-                        <span i18n class="error-message">Your message is required</span>
+                        <span class="error-message">{{'contact.errorMessageMessage' | translate}}</span>
                         }
                     </div>
                     <div class="privacy-policy">
@@ -59,17 +55,18 @@
                             [ngClass]="{'checkbox-checked': isChecked, 'checkbox-unchecked': !isChecked}"
                             class="checkbox"></div>
                         <div>
-                            <span i18n>
-                                I've read the <a
-                                    [ngStyle]="{ 'width': isPrivacyPolicy === 'privacy policy' ? '110px' : '180px' }"
-                                    (click)="showPrivacyPolicy()">{{isPrivacyPolicy}} </a> and agree to the processing
-                                of my data as
-                                outlined.
+                            <span>
+                                {{'contact.firstSpan' | translate}}
+                                <a [ngStyle]="{ 'width': translationService.currentLanguage === 'en' ? '110px' : '180px' }"
+                                    (click)="showPrivacyPolicy()">
+                                    {{isPrivacyPolicy | translate}}
+                                </a>
+                                {{'contact.secondSpan' | translate}}
                             </span>
                         </div>
                     </div>
                     @if (showErrorCheckbox) {
-                    <span i18n class="error-message">Please accept the privacy policy.</span>
+                    <span class="error-message">{{'contact.errorMessagePrivacyPolicy' | translate}}</span>
                     }
                     <button class="disabled-button" [ngClass]="{
                         'enabled-button':
@@ -82,7 +79,7 @@
                         !email.disabled &&
                         message.valid &&
                         message.touched &&
-                        !message.disabled}" type="submit">{{buttonName}}</button>
+                        !message.disabled}" type="submit">{{buttonName | translate}}</button>
                 </form>
             </div>
         </div>
@@ -91,7 +88,7 @@
 @if(isSubmitted) {
 <div class="pop-up-contact-container">
     <div class="feedback-container">
-        <span i18n>Thank you very much!<br> Your message has been successfully submitted.</span>
+        <span [innerHTML]="'successfullyMessage' | translate"></span>
     </div>
 </div>
 }

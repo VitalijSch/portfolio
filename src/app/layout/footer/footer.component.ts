@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [
+    TranslateModule
+  ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
@@ -25,5 +28,12 @@ export class FooterComponent {
    */
   public currentYear(): number {
     return new Date().getFullYear();
+  }
+
+  backToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   }
 }

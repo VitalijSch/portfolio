@@ -1,16 +1,8 @@
 <div class="aboute-me-container">
     <img src="./assets/img/ball.png" alt="">
-    <span i18n>Let`s work<br>together</span>
+    <span [innerHTML]="'aboutMe.header' | translate"></span>
     <div>
-        <p i18n>
-            I am a Front-end developer based in Lahr, in the Black Forest Germany. I enjoy helping designers and
-            companies bring
-            their
-            ideas into real life. I am looking forward to continuing my developer career with a job in a junior web
-            developer position.
-            <br><br>
-            If you think I’d be a good match for your projects, contact me!
-        </p>
-        <a i18n href="#contact">Send a message</a>
+        <p [innerHTML]="'aboutMe.description' | translate"></p>
+        <a href="#contact">{{'aboutMe.button' | translate}}</a>
     </div>
 </div>

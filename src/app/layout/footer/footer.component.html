@@ -1,7 +1,7 @@
 <div class="background-container">
     <div class="footer-container">
         <div class="top-container">
-            <a href="#aboveTheFold"><img src="./assets/img/logo.png" alt="logo"></a>
+            <a (click)="backToTop()"><img src="./assets/img/logo.png" alt="logo"></a>
             <span>© Vitalij Schwab {{currentYear()}}</span>
             <div class="icons-container">
                 <a href="https://github.com/VitalijSch" target="_blank"><img src="./assets/img/footer/github.png"
@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="impressum-container">
-            <a i18n (click)="showImprint()">Imprint</a>
+            <a (click)="showImprint()">{{'footer.imprint' | translate}}</a>
         </div>
     </div>
 </div>

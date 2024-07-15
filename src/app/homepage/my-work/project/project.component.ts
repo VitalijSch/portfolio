@@ -1,11 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, Input, ViewChildren } from '@angular/core';
 import { MyWorks } from '../../../interfaces/my-works';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [CommonModule,],
+  imports: [
+    CommonModule,
+    TranslateModule
+  ],
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss'
 })

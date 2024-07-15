@@ -1,11 +1,11 @@
 <nav>
     <img (click)="showHomepage()" src="./assets/img/logo.png" alt="logo white">
     <div>
-        <a i18n href="#aboutMe">About me</a>
-        <a i18n href="#skillSet">Skill set</a>
-        <a i18n href="#myWork">My work</a>
-        <span class="langDe" (click)="changeLanguage('de-DE')">DE</span>
-        <span class="langEn" (click)="changeLanguage('en-US')">EN</span>
+        <a href="#aboutMe">{{'header.aboutMe' | translate}}</a>
+        <a href="#skillSet">{{'header.skillSet' | translate}}</a>
+        <a href="#myWork">{{'header.myWork' | translate}}</a>
+        <span class="langDe" (click)="translationService.switchLanguage('de')">DE</span>
+        <span class="langEn" (click)="translationService.switchLanguage('en')">EN</span>
     </div>
     <img (click)="handleMenuBarMobile()" src="./assets/img/header/burger_menu.png" alt="burger menu">
 </nav>
@@ -15,11 +15,11 @@
         <img (click)="handleMenuBarMobile()" src="./assets/img/header/close.png" alt="close">
     </div>
     <div>
-        <span class="langDe" (click)="changeLanguage('de-DE')">DE</span>
-        <span class="langEn" (click)="changeLanguage('en-US')">EN</span>
-        <a i18n (click)="handleMenuBarMobile()" href="#aboutMe">About me</a>
-        <a i18n (click)="handleMenuBarMobile()" href="#skillSet">Skill set</a>
-        <a i18n (click)="handleMenuBarMobile()" href="#myWork">My work</a>
-        <a i18n (click)="handleMenuBarMobile()" href="#contact">Contact</a>
+        <span class="langDe" (click)="translationService.switchLanguage('de')">DE</span>
+        <span class="langEn" (click)="translationService.switchLanguage('en')">EN</span>
+        <a (click)="handleMenuBarMobile()" href="#aboutMe">{{'header.aboutMe' | translate}}</a>
+        <a (click)="handleMenuBarMobile()" href="#skillSet">{{'header.skillSet' | translate}}</a>
+        <a (click)="handleMenuBarMobile()" href="#myWork">{{'header.myWork' | translate}}</a>
+        <a (click)="handleMenuBarMobile()" href="#contact">{{'header.contact' | translate}}</a>
     </div>
 </div>
