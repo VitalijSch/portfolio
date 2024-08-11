@@ -40,7 +40,7 @@ export class MyWorkComponent {
     {
       img: 3,
       title: 'Pokedex',
-      languages: 'HTML | CSS | JavaScript | Api',
+      languages: 'HTML | SCSS | Angular | TypeScript | Api',
       description: 'myWork.pokedex',
       url: 'https://pokedex.vitalij-schwab.com',
     }
