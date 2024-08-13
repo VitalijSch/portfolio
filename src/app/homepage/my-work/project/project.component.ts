@@ -56,6 +56,8 @@ export class ProjectComponent implements AfterViewInit {
       window.open('https://github.com/VitalijSch/El-Pollo-Loco', '_blank');
     } else if (title === 'Pokedex') {
       window.open('https://github.com/VitalijSch/pokedex-angular.git', '_blank');
+    } else if (title === 'DA-Bubble') {
+      window.open('https://github.com/VitalijSch/DA-Bubble', '_blank');
     }
   }
 }

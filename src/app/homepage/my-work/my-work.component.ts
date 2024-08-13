@@ -18,10 +18,10 @@ export class MyWorkComponent {
   myWorks: MyWorks[] = [
     {
       img: 0,
-      title: 'DA-Bubble (WIP)',
+      title: 'DA-Bubble',
       languages: 'HTML| SCSS | Angular | TypeScript | Firebase ',
       description: 'myWork.daBubble',
-      url: '',
+      url: 'https://da-bubble.vitalij-schwab.com/',
     },
     {
       img: 1,

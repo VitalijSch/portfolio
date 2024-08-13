@@ -121,26 +121,6 @@
     text-align: end;
 }
 
-.wip-button {
-    cursor: unset;
-    width: 137px;
-    font-size: 23px;
-    box-shadow: 5px 5px 15px 0px #00000026;
-    padding: 15px 30px;
-    border-radius: 10px;
-    background-color: white;
-    border: 2px solid grey;
-    color: grey;
-}
-
-.wip-img {
-    cursor: unset;
-    height: 393px;
-    box-shadow: 5px 5px 15px 0px #00000026;
-    transition: transform 0.3s ease;
-    filter: grayscale(100%);
-}
-
 @media(max-width: 1000px) {
     .project-container {
         flex-direction: column;
